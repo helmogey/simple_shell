@@ -10,9 +10,20 @@ int main()
 char *cmd;
 int status;
 
+while (1)
+{
 cmd = our_shell();
+cmd[strcspn(cmd, "\n")] = '\0';
+if (strcmp(cmd, "exit") == 0)
+{
+break;
+}
+else
+{
 status =  exec_shell(cmd);
 printf("%d", status);
+}
+}
 return (1);
 }
 
