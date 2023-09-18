@@ -8,7 +8,6 @@
 int main()
 {
 char *cmd;
-int status;
 
 while (1)
 {
@@ -20,13 +19,7 @@ break;
 }
 else
 {
-status =  exec_shell(cmd);
-if (status == -1)
-{
-printf("Error alocating memory");
-return (-1);
-}
-printf("%d\n", status);
+exec_shell(cmd);
 }
 }
 return (1);

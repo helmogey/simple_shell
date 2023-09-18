@@ -2,10 +2,12 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
+#include <sys/wait.h>
 
 
 
 
 
 char* our_shell(void);
-int exec_shell(const char *prompt);
+void exec_shell(const char *prompt);
