@@ -21,7 +21,7 @@ break;
 else
 {
 status =  exec_shell(cmd);
-printf("%d", status);
+printf("%d\n", status);
 }
 }
 return (1);
