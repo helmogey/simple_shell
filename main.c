@@ -8,10 +8,11 @@
 int main()
 {
 char *cmd;
+int status;
 
 cmd = our_shell();
-// printf("%s\n", cmd);
-printf("H_Elmogey_shell%s\n", cmd);
+status =  exec_shell(cmd);
+printf("%d", status);
 return (1);
 }
 
