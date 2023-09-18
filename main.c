@@ -21,6 +21,11 @@ break;
 else
 {
 status =  exec_shell(cmd);
+if (status == -1)
+{
+printf("Error alocating memory");
+return (-1);
+}
 printf("%d\n", status);
 }
 }

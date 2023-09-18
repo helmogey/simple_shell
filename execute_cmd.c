@@ -12,6 +12,10 @@ int exec_shell(const char *prompt)
 	char *command;
 
 	command = malloc(strlen(prompt) + 1);
+	if (command == NULL)
+	{
+	return (-1);
+	}
 	strcpy(command, prompt);
 	status = system(command);
 	free(command);
