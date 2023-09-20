@@ -2,13 +2,15 @@
 /**
 *exec_shell - start
 *Description: main
-*command: input
+*@command: input
 *Return: void
 */
-void exec_shell(const char* command)
+void exec_shell(const char *command)
 {
 pid_t pid = fork();
 int result, status;
+const char *directory;
+char **env = environ;
 
 if (pid < 0)
 {
@@ -19,13 +21,12 @@ else if (pid == 0)
 {
 if (command[0] == 'c' && command[1] == 'd' && command[2] == ' ')
 {
-const char* directory = command + 3;
+directory = command + 3;
 result = chdir(directory);
 exit(result == 0 ? 0 : 1);
 }
 else if (command[0] == 'e' && command[1] == 'n' && command[2] == 'v' && command[3] == '\0')
 {
-char** env = environ;
 while (*env != NULL)
 {
 printf("%s\n", *env);
