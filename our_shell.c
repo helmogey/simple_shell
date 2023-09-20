@@ -1,10 +1,10 @@
 #include "shell.h"
 /**
-*main - start
+*our_shell - start
 *Description: main
 *Return: void
 */
-char* our_shell(void)
+char *our_shell(void)
 {
 char *cmd = malloc(100);
 
