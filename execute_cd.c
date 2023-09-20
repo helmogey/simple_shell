@@ -2,6 +2,7 @@
 /**
 *execute_cd - start
 *Description: main
+*@command: input
 *Return: void
 */
 void execute_cd(const char *command)

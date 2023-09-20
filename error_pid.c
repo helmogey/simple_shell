@@ -2,6 +2,8 @@
 /**
 *error_pid - start
 *Description: main
+*@waitResult: input 1
+*@status: input 2
 *Return: void
 */
 void error_pid(pid_t waitResult, int status)
