@@ -4,8 +4,7 @@
 *Description: main
 *Return: void
 */
-
-int main()
+int main(void)
 {
 char *cmd;
 int status = 1;

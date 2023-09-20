@@ -7,7 +7,7 @@
 
 
 
-
+extern char** environ;
 
 char* our_shell(void);
 void exec_shell(const char *prompt);
