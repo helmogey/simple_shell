@@ -8,9 +8,7 @@
 void exec_shell(const char *command)
 {
 pid_t pid = fork();
-int result, status;
-const char *directory;
-char **env = environ;
+int status;
 
 if (pid < 0)
 {
@@ -21,18 +19,11 @@ else if (pid == 0)
 {
 if (command[0] == 'c' && command[1] == 'd' && command[2] == ' ')
 {
-directory = command + 3;
-result = chdir(directory);
-exit(result == 0 ? 0 : 1);
+execute_cd(command);
 }
-else if (command[0] == 'e' && command[1] == 'n' && command[2] == 'v' && command[3] == '\0')
+else if (strcmp(command, "env") == 0)
 {
-while (*env != NULL)
-{
-printf("%s\n", *env);
-env++;
-}
-exit(0);
+execute_env();
 }
 else
 {
@@ -43,15 +34,6 @@ exit(result);
 else
 {
 pid_t waitResult = waitpid(pid, &status, 0);
-if (waitResult == -1)
-{
-fprintf(stderr, "Failed to wait for child process\n");
-exit(1);
-}
-if (WIFSIGNALED(status))
-{
-int signalNumber = WTERMSIG(status);
-printf("Child process terminated by signal: %d\n", signalNumber);
-}
+error_pid(waitResult, status);
 }
 }
