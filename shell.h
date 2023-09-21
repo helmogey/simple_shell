@@ -17,4 +17,7 @@ void execute_env(void);
 void execute_cd(const char *command);
 void error_pid(pid_t waitResult, int status);
 int _strcmp(const char *s1, char *s2);
+void _puts(char *str);
+int _putchar(char c);
+void puts_without_newline(char *str);
 #endif

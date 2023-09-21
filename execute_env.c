@@ -10,7 +10,7 @@ char **env = environ;
 
 while (*env != NULL)
 {
-printf("%s\n", *env);
+_puts(*env);
 env++;
 }
 exit(0);

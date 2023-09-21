@@ -12,7 +12,7 @@ int status;
 
 if (pid < 0)
 {
-fprintf(stderr, "Fork failed\n");
+_puts("Fork failed");
 exit(1);
 }
 else if (pid == 0)

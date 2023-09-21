@@ -10,7 +10,7 @@ void error_pid(pid_t waitResult, int status)
 {
 if (waitResult == -1)
 {
-fprintf(stderr, "Failed to wait for child process\n");
+_puts("Failed to wait for child process");
 exit(1);
 }
 if (WIFSIGNALED(status))

@@ -7,8 +7,13 @@
 char *our_shell(void)
 {
 char *cmd = malloc(100);
+size_t len = strlen(cmd);
 
-printf("ourshell$");
+puts_without_newline("ourshell$");
 fgets(cmd, 100, stdin);
+if (len > 0 && cmd[len - 1] == '\n')
+{
+cmd[len - 1] = '\0';
+}
 return (cmd);
 }
