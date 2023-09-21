@@ -21,7 +21,7 @@ if (command[0] == 'c' && command[1] == 'd' && command[2] == ' ')
 {
 execute_cd(command);
 }
-else if (strcmp(command, "env") == 0)
+else if (_strcmp(command, "env") == 0)
 {
 execute_env();
 }
