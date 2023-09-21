@@ -8,12 +8,16 @@ int main(void)
 {
 char *cmd;
 int status = 1;
+size_t len;
 
 while (1)
 {
 cmd = our_shell();
-cmd[strcspn(cmd, "\n")] = '\0';
-if (strcmp(cmd, "exit") == 0)
+len = _strlen(cmd);
+if (len > 0 && cmd[len - 1] == '\n')
+{
+cmd[len - 1] = '\0';
+}if (_strcmp(cmd, "exit") == 0)
 {
 status = 98;
 break;

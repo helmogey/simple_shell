@@ -20,4 +20,5 @@ int _strcmp(const char *s1, char *s2);
 void _puts(char *str);
 int _putchar(char c);
 void puts_without_newline(char *str);
+int _strlen(char *s);
 #endif

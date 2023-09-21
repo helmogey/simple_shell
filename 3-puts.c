@@ -12,20 +12,6 @@ int _putchar(char c)
 }
 
 
-
-
-void print_numbers(void)
-{
-int i;
-
-for (i = 0; i <= 9; ++i)
-{
-_putchar(i + '0');
-}
-_putchar('\n');
-return;
-}
-
 /**
  * puts2 - check the code
  * @str: input string
@@ -33,7 +19,7 @@ return;
  */
 void puts_without_newline(char *str)
 {
-int l = strlen(str);
+int l = _strlen(str);
 int i;
 
 for (i = 0; i < l; i += 1)
@@ -50,5 +36,20 @@ return;
  */
 void _puts(char *str)
 {
-puts(str);
+puts_without_newline(str);
+_putchar('\n');
 }
+
+
+/*
+char _strcspn(char *cmd)
+{
+size_t len = strlen(cmd);
+
+if (len > 0 && cmd[len - 1] == '\n')
+{
+cmd[len - 1] = '\0';
+}
+return (cmd);
+}
+*/
