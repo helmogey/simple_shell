@@ -21,6 +21,10 @@ exec_shell(cmd);
 while (1)
 {
 cmd = our_shell();
+if (!cmd || !*cmd)
+{
+break;
+}
 len = _strlen(cmd);
 printf("here %ld\n",len);
 if (len > 0 && cmd[len - 1] == '\n')
