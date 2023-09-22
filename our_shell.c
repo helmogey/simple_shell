@@ -38,7 +38,6 @@ nread = getline(&cmd, &len, stdin);
 if (nread == -1)
 {
 free(cmd);
-_putchar('\n');
 return (NULL);
 }
 /*puts_without_newline("ourshell$");*/
