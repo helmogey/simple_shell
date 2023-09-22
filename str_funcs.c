@@ -24,7 +24,7 @@ return (i);
  * @s2: sec string
  * Return: Always 0.
  */
-int _strcmp(const char *s1, char *s2)
+int _strcmp(char *s1, char *s2)
 {
 while (*s1 && *s2)
 {

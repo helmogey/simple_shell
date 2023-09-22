@@ -12,11 +12,11 @@
 extern char **environ;
 
 char *our_shell(void);
-void exec_shell(const char *prompt);
+void exec_shell(char *prompt);
 void execute_env(void);
-void execute_cd(const char *command);
+void execute_cd(char *command);
 void error_pid(pid_t waitResult, int status);
-int _strcmp(const char *s1, char *s2);
+int _strcmp(char *s1, char *s2);
 void _puts(char *str);
 int _putchar(char c);
 void puts_without_newline(char *str);

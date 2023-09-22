@@ -5,7 +5,7 @@
 *@command: input
 *Return: void
 */
-void execute_cd(const char *command)
+void execute_cd(char *command)
 {
 int result;
 const char *directory;
