@@ -33,7 +33,7 @@ cmd[len - 1] = '\0';
 }
 if (_strcmp(cmd, "exit") == 0)
 {
-status = 0;
+status = 2;
 break;
 }
 else
