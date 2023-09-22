@@ -21,4 +21,5 @@ void _puts(char *str);
 int _putchar(char c);
 void puts_without_newline(char *str);
 int _strlen(char *s);
+void free_memory(char **ptr);
 #endif
