@@ -8,7 +8,7 @@
 void execute_cd(char *command)
 {
 int result;
-const char *directory;
+const char *directory = NULL;
 
 directory = command + 3;
 result = chdir(directory);

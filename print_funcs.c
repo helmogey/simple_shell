@@ -8,10 +8,8 @@
  */
 int _putchar(char c)
 {
-	return (write(1, &c, 1));
+return (write(1, &c, 1));
 }
-
-
 /**
  * puts2 - check the code
  * @str: input string
@@ -28,7 +26,6 @@ _putchar(str[i]);
 }
 return;
 }
-
 /**
  * _puts - check the code
  * @str: input string
@@ -39,8 +36,6 @@ void _puts(char *str)
 puts_without_newline(str);
 _putchar('\n');
 }
-
-
 /*
 char _strcspn(char *cmd)
 {

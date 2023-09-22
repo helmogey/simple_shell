@@ -20,11 +20,6 @@ cmd[len - 1] = '\0';
 return (cmd);
 }
 */
-
-
-
-
-
 char *our_shell(void)
 {
 char *cmd = NULL;
