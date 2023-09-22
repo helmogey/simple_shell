@@ -24,7 +24,6 @@ cmd = our_shell();
 status = 0;
 if (!cmd || !*cmd)
 {
-free(cmd);
 break;
 }
 len = _strlen(cmd);
@@ -35,7 +34,6 @@ cmd[len - 1] = '\0';
 if (_strcmp(cmd, "exit") == 0)
 {
 status = 0;
-free(cmd);
 break;
 }
 else
