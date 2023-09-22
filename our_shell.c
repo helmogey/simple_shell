@@ -34,10 +34,11 @@ ssize_t nread;
 
 
 nread = getline(&cmd, &len, stdin);
-_putchar('\n');
+
 if (nread == -1)
 {
 free(cmd);
+_putchar('\n');
 return (NULL);
 }
 /*puts_without_newline("ourshell$");*/
