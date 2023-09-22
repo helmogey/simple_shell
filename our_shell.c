@@ -31,10 +31,7 @@ char *cmd = NULL;
 size_t len = 0;
 ssize_t nread;
 
-
-
 nread = getline(&cmd, &len, stdin);
-
 if (nread == -1)
 {
 free(cmd);

@@ -13,5 +13,6 @@ while (*env != NULL)
 _puts(*env);
 env++;
 }
+free(env);
 exit(0);
 }

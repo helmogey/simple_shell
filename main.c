@@ -7,7 +7,7 @@
 */
 int main(int argc, char **argv)
 {
-char *cmd;
+char *cmd = NULL;
 int status = 1;
 size_t len;
 
