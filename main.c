@@ -21,6 +21,7 @@ else
 while (1)
 {
 cmd = our_shell();
+status = 0;
 if (!cmd || !*cmd)
 {
 break;
