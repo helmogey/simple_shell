@@ -16,6 +16,8 @@ if (argc == 2)
 cmd = argv[1];
 exec_shell(cmd);
 }
+else
+{
 while (1)
 {
 cmd = our_shell();
@@ -36,6 +38,7 @@ break;
 else
 {
 exec_shell(cmd);
+}
 }
 }
 return (status);
