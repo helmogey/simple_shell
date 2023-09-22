@@ -11,8 +11,6 @@ char *cmd;
 int status = 1;
 size_t len;
 
-printf("argcount %d\n", argc);
-printf("argv %s\n", argv[0]);
 if (argc == 2)
 {
 cmd = argv[1];
@@ -26,7 +24,6 @@ if (!cmd || !*cmd)
 break;
 }
 len = _strlen(cmd);
-printf("here %ld\n",len);
 if (len > 0 && cmd[len - 1] == '\n')
 {
 cmd[len - 1] = '\0';
