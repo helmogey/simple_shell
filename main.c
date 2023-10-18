@@ -11,7 +11,7 @@ char *cmd = NULL;
 int status = 1;
 size_t len;
 
-if (argc == 2)
+if (argc > 1)
 {
 cmd = argv[1];
 exec_shell(cmd);
