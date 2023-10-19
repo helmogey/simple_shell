@@ -3,6 +3,7 @@
 *main - start
 *Description: main
 *@argv: input
+*@argc: input
 *Return: void
 */
 int main(int argc, char **argv)
