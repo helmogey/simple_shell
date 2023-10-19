@@ -9,7 +9,7 @@ char *our_shell(void)
 char *cmd = NULL;
 size_t len = 0;
 ssize_t nread;
-puts_without_newline("ourshell$");
+/*puts_without_newline("ourshell$");*/
 nread = getline(&cmd, &len, stdin);
 if (nread == -1)
 {
