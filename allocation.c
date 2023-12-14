@@ -15,7 +15,6 @@ char *cst_memory(char *s, char b, unsigned int n)
 		s[i] = b;
 	return (s);
 }
-
 /**
  * str_free - frees a string of strings
  * @pp: string of strings
@@ -30,7 +29,6 @@ void str_free(char **pp)
 		free(*pp++);
 	free(a);
 }
-
 /**
  * memory_allocat - reallocates a block of memory
  * @ptr: pointer to previous malloc'ated block

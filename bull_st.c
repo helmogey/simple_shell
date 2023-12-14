@@ -1,5 +1,4 @@
 #include "shell.h"
-
 /**
  * my_help - displays help information
  * @info: pointer to the info struct
@@ -16,7 +15,6 @@ int my_help(info_t *info)
 
 	return (0);
 }
-
 /**
  * my_exit - exits the shell
  * @info: pointer to the info struct
@@ -45,7 +43,6 @@ int my_exit(info_t *info)
 	info->err_num = -1;
 	return (-2);
 }
-
 /**
  * my_cd - changes the current directory of the process
  * @info: pointer to the info struct

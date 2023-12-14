@@ -17,7 +17,6 @@ int l_string(char *s)
 		i++;
 	return (i);
 }
-
 /**
  * strs_comp - performs lexicogarphic comparison of two strangs.
  * @s1: the first strang
@@ -39,7 +38,6 @@ int strs_comp(char *s1, char *s2)
 	else
 		return (*s1 < *s2 ? -1 : 1);
 }
-
 /**
  * hystck - checks if needle starts with haystack
  * @haystack: string to search

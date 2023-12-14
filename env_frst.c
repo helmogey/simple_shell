@@ -11,7 +11,6 @@ int display_environment(info_t *info)
     custom_print_str_list(info->environment);
     return (0);
 }
-
 /**
  * get_environment_variable - Gets the value of an environment variable.
  * @info: Structure containing potential arguments. Used to maintain
@@ -34,7 +33,6 @@ char *get_environment_variable(info_t *info, const char *name)
 
     return (NULL);
 }
-
 /**
  * set_environment_variable - Initializes a new environment variable
  *                            or modifies an existing one.
