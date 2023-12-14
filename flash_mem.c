@@ -62,29 +62,34 @@ int write_history(info_t *info)
 
 int read_history(info_t *info)
 {
+    int fd, i, last = 0, linecount = 0;
+    ssize_t rdlen;
+    struct stat st;
+    char *buf;
     char *filename = get_history_file(info);
     if (!filename)
         return 0;
 
-    int fd = open(filename, O_RDONLY);
+    fd = open(filename, O_RDONLY);
     free(filename);
 
     if (fd == -1)
         return 0;
 
-    struct stat st;
-    if (fstat(fd, &st) || st.st_size < 2) {
+    if (fstat(fd, &st) || st.st_size < 2)
+    {
         close(fd);
         return 0;
     }
 
-    char *buf = malloc(sizeof(char) * (st.st_size + 1));
-    if (!buf) {
+    buf = malloc(sizeof(char) * (st.st_size + 1));
+    if (!buf)
+    {
         close(fd);
         return 0;
     }
 
-    ssize_t rdlen = read(fd, buf, st.st_size);
+    rdlen = read(fd, buf, st.st_size);
     buf[st.st_size] = '\0';
 
     if (rdlen <= 0) {
@@ -95,8 +100,8 @@ int read_history(info_t *info)
 
     close(fd);
 
-    int last = 0, linecount = 0;
-    for (int i = 0; i < st.st_size; i++) {
+    for (i = 0; i < st.st_size; i++)
+    {
         if (buf[i] == '\n') {
             buf[i] = '\0';
             build_history_list(info, buf + last, linecount++);
@@ -104,24 +109,18 @@ int read_history(info_t *info)
         }
     }
 
-    // Process the last line if not processed
     if (last != st.st_size)
         build_history_list(info, buf + last, linecount++);
 
-    // Free the buffer
     free(buf);
 
-    // Update history count
     info->histcount = linecount;
 
-    // Delete excess history nodes
     while (info->histcount-- >= HIST_MAX)
         custom_delete_node_at_index(&(info->history), 0);
 
-    // Renumber the history list
     renumber_history(info);
 
-    // Return the final history count
     return info->histcount;
 }
 

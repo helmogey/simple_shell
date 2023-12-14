@@ -51,10 +51,10 @@ int is_alpha_character(int c)
  */
 int convert_string_to_integer(char *s)
 {
-	int sign = 1, flag = 0, output;
+	int i, sign = 1, flag = 0, output;
 	unsigned int result = 0;
 
-	for (int i = 0; s[i] != '\0' && flag != 2; i++)
+	for (i = 0; s[i] != '\0' && flag != 2; i++)
 	{
 		if (s[i] == '-')
 			sign *= -1;
